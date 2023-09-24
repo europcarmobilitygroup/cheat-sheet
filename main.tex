@@ -1,0 +1,68 @@
+\documentclass{cheatsheet}
+\begin{document}
+    \backgroundsetup{
+     scale=1,
+     angle=-90,
+     opacity=.1,
+     contents={\includegraphics{assets/background.pdf}}
+    }
+    \info{
+        \medskip
+            \includesvg[width=5.25cm]{assets/emobg.svg}
+            \bigskip
+            \github{europcarmobilitygroup}
+    }
+
+    \begin{minipage}[t]{.75\linewidth}
+        \bigskip
+        \texttt{
+            \Huge
+                \color{emobg1}type%
+                \color{emobg2}!%
+                \color{emobg3}(scope)%
+                \color{body}:{JIRA-000}  description%
+            \bigskip
+            \newline
+            \large[optional body] \color{gray!30} BREAKING CHANGE: *******
+            \newline
+            \large\color{body} [optional footer(s)]
+                \color{gray!30} Reviewed-by: X
+                \color{gray!30} Refs: #123
+            \bigskip
+        }
+        \bigskip
+
+        \sheetTitle{\color{emobg1} \faCodeBranch type}
+            \bigskip
+            \sheetTag{chore}{100} \sheetTagText{trivial code changes: whitespaces, linter, code formatting, removing unused code} \par
+            \sheetTag{feat}{95} \sheetTagText{introduces new, backward-compatible abilities or functionality} \par
+            \sheetTag{fix}{90} \sheetTagText{patches a bug in the code of the non-production environment \faCodeBranch $\rightarrow$ \inlinecode{Java}{develop}} \par
+            \sheetTag{hotfix}{85} \sheetTagText{backward-compatible bug fix for the production environment \faCodeBranch $\rightarrow$ \inlinecode{Java}{master}} \par
+            \sheetTag{perf}{80} \sheetTagText{any performance improvements, including the code splitting} \par
+            \sheetTag{test}{75} \sheetTagText{adding new or refactoring existing \inlinecode{Java}{.spec} files: unit, snapshot or integration tests} \par
+            \sheetTag{refactor}{70} \sheetTagText{changes such as: simplifying or removing redundant code, renaming variables} \par
+            \sheetTag{style}{65} \sheetTagText{any styling changes to \inlinecode{Java}{.css} or \inlinecode{Java}{.scss} file or \inlinecode{Java}{<style lang="scss">}} \par
+            \sheetTag{docs}{60} \sheetTagText{new documentation for the developers, both: inline \inlinecode{Java}{JSDoc} and markdown files \inlinecode{Java}{.md}} \par
+            \sheetTag{ci}{55} \sheetTagText{changes related to the continuous integration and deployment: scripts, config and tools} \par
+
+        \begin{minipage}[t]{.4\linewidth}
+            \sheetTitle{\color{emobg2}!}
+            \textbf{Optional} character added after \inlinecode{Java}{type} \par or \inlinecode{Java}{scope} to draw attention to the commit.
+        \end{minipage}%
+        \begin{minipage}[t]{.6\linewidth}
+            \sheetTitle{\color{emobg3}scope}
+            Indicates where the changes were made.\par
+            Can be be a parent folder (Domain) of the feature you are working.
+            When the scope applies to the entire app, we use \inlinecode{Java}{all} for a scope.
+        \end{minipage}%
+
+    \end{minipage}%
+    \begin{minipage}[t]{.25\linewidth}
+        \sheetHeader
+        \begin{minipage}[b]{1\linewidth}
+            \faLink \href{https://www.conventionalcommits.org/en/v1.0.0/#summary}{Conventional commit format}}
+        \end{minipage}%
+    \end{minipage}%
+
+\end{document}
+
