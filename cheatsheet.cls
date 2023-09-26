@@ -48,6 +48,13 @@
     \colorlet{accent}{#1}
 }
 
+\backgroundsetup{
+    scale=1,
+    angle=-90,
+    opacity=.1,
+    contents={\includegraphics{assets/background.pdf}}
+}
+
 \hypersetup{
     colorlinks,
     urlcolor={emobg1}

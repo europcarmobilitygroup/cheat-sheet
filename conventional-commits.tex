@@ -1,18 +1,11 @@
 \documentclass{cheatsheet}
 \begin{document}
-    \backgroundsetup{
-     scale=1,
-     angle=-90,
-     opacity=.1,
-     contents={\includegraphics{assets/background.pdf}}
-    }
     \info{
         \medskip
             \includesvg[width=5.25cm]{assets/emobg.svg}
             \bigskip
             \github{europcarmobilitygroup}
     }
-
     \begin{minipage}[t]{.75\linewidth}
         \bigskip
         \texttt{
@@ -31,7 +24,6 @@
             \bigskip
         }
         \bigskip
-
         \sheetTitle{\color{emobg1} \faCodeBranch type}
             \bigskip
             \sheetTag{chore}{100} \sheetTagText{trivial code changes: whitespaces, linter, code formatting, removing unused code} \par
@@ -44,25 +36,28 @@
             \sheetTag{style}{65} \sheetTagText{any styling changes to \inlinecode{Java}{.css} or \inlinecode{Java}{.scss} file or \inlinecode{Java}{<style lang="scss">}} \par
             \sheetTag{docs}{60} \sheetTagText{new documentation for the developers, both: inline \inlinecode{Java}{JSDoc} and markdown files \inlinecode{Java}{.md}} \par
             \sheetTag{ci}{55} \sheetTagText{changes related to the continuous integration and deployment: scripts, config and tools} \par
+            \bigskip
 
-        \begin{minipage}[t]{.4\linewidth}
+        \begin{minipage}[t]{.5\linewidth}
+            \bigskip
             \sheetTitle{\color{emobg2}!}
-            \textbf{Optional} character added after \inlinecode{Java}{type} \par or \inlinecode{Java}{scope} to draw attention to the commit.
+            \textbf{Optional} character added after \inlinecode{Java}{type} or \inlinecode{Java}{scope}. \par
+            Intended to draw attention to the commit.
         \end{minipage}%
-        \begin{minipage}[t]{.6\linewidth}
+        \begin{minipage}[t]{.5\linewidth}
+            \bigskip
             \sheetTitle{\color{emobg3}scope}
-            Indicates where the changes were made.\par
-            Can be be a parent folder (Domain) of the feature you are working.
+            Indicates the place or context of the changes.\par
+            Usually a parent folder of the component, application domain or module. \par
+            \bigskip
             When the scope applies to the entire app, we use \inlinecode{Java}{all} for a scope.
         \end{minipage}%
-
     \end{minipage}%
     \begin{minipage}[t]{.25\linewidth}
         \sheetHeader
-        \begin{minipage}[b]{1\linewidth}
-            \faLink \href{https://www.conventionalcommits.org/en/v1.0.0/#summary}{Conventional commit format}}
-        \end{minipage}%
     \end{minipage}%
 
+    \sheetTextbox{23.5cm}{5cm}{right}{
+        \includegraphics[width=4cm]{assets/git-flow.png}
+    }
 \end{document}
-
