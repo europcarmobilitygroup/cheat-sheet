@@ -65,7 +65,7 @@
     basicstyle=\ttfamily,
 }
 
-\newcommand{\inlinecode}[2]{\colorbox{emphasis}{\lstinline[language=#1]$#2$}}
+\newcommand{\inlinecode}[1]{\colorbox{emphasis}{\lstinline[language=Java]$#1$}}
 
 \AtBeginDocument{\color{body}}
 \AtBeginDocument{\small}
@@ -127,9 +127,9 @@
             color=Black!75,
             inner xsep = .75ex,
             inner ysep = .5ex,
-            text height = 1.5ex,
             text depth = .25ex,
-            below = .5ex
+            text height = 1.5ex,
+    	      text width = 82.5ex
           ]{#1};
     \vspace{2.5pt}
 }

@@ -1,0 +1,71 @@
+\documentclass{cheatsheet}
+\begin{document}
+    \info{
+        \medskip
+            \includesvg[width=5.25cm]{assets/emobg.svg}
+            \bigskip
+            \github{europcarmobilitygroup}
+    }
+    \begin{minipage}[t]{.80\linewidth}
+        \bigskip%
+        \texttt{
+            \Huge
+                \color{emobg3}Given-When%
+                \color{emobg1}(-And)(-But)%
+                \color{emobg3}-Then%
+                \color{emobg1}(-Finally)%
+            \bigskip
+            \newline
+            \large\color{emobg3!50} Gherkin is a commonly used language for writing behaviour-driven development (BDD) test descriptions in a human-readable format.
+            \bigskip
+        }
+        \par
+        \bigskip%
+        \sheetTitle{\color{emobg1} \faLink \href{https://cucumber.io/docs/gherkin/reference/}{keywords used to structure and describe the test steps}}
+        \bigskip%
+
+        \bigskip%
+        \sheetTag{Given}{100} \sheetTagText{sets up the initial context or preconditions for the test and describes the state of the system before any action is taken (starting point of a scenario)}
+        \par%
+        \bigskip%
+
+        \bigskip%
+        \enspace\sheetTag{When}{100} \sheetTagText{describes the action or event that triggers the scenario and represents the specific action one wants to test (interaction with the system)}
+        \par%
+        \bigskip%
+
+        \bigskip%
+        \enspace\quad\sheetTag{And}{60} \sheetTagText{used to continue the description in the same context. It can follow any of the keywords and is used when multiple actions or conditions need to be specified}
+        \par%
+        \bigskip%
+
+        \bigskip%
+        \enspace\qquad\sheetTag{But}{50} \sheetTagText{similar to "And" and used to continue the description when one needs to highlight a contrasting/alternative action (after "And") or expectation (after "Then")}
+        \par%
+        \bigskip%
+
+        \bigskip%
+        \enspace\sheetTag{Then}{100} \sheetTagText{describes the expected outcome of the action specified in the "When" step. Represents the assertion or verification that the system behaves as expected}
+        \par%
+        \bigskip%
+
+        \bigskip%
+        \sheetTag{Finally}{30} \sheetTagText{not as commonly used as the others and describes the cleanup or post-action steps that need to be taken after the main actions and assertions are complete. It's typically used at the end of the scenario (or in the \inlinecode{afterEach()} or equivalent hook)}
+        \par%
+        \bigskip%
+
+        \bigskip%
+        \bigskip%
+        \sheetTag{*}{30} \sheetTagText{the least elegant solution and placeholder replacing any keyword used when we have steps that are a list}
+        \par%
+        \bigskip%     
+
+    \end{minipage}%
+    \begin{minipage}[t]{.20\linewidth}
+        \sheetHeader
+    \end{minipage}%
+
+    \sheetTextbox{24cm}{10cm}{right}{
+        \includegraphics[width=4cm]{assets/cucumber.png}
+    }
+\end{document}
